@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="template">
+<link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css" />
+<head>
+<meta charset="utf-8">
+<title>Ajout des Professeurs</title>
+</head>
+<body>
+<div layout:fragment="Mycontent">
+<div class="container mt-5">
+<div class="card">
+<div class="card-header"> Ajout des Professeurs </div>
+<div class="card-body">
+ <form th:action="@{saveProfesseur}" method="post">
+ <div class="form-group">
+<label class="control-label">Nom Professeur :</label>
+<input type="text" name="nomProf" class="form-control" />
+
+ </div>
+  <div class="form-group">
+<label class="control-label">prenom Professeur :</label>
+<input type="text" name="prenomProf" class="form-control" />
+ </div>
+ <div class="form-group">
+<label class="control-label">CIN Professeur :</label>
+<input type="number" name="CIN" class="form-control" />
+ </div>
+ 
+  <div class="form-group">
+<label class="control-label">adresse Professeur :</label>
+<input type="text" name="adresse" class="form-control" />
+ </div>
+ <div class="form-group">
+ <label class="control-label">date création :</label>
+<input type="date" name="dateCreation" class="form-control" />
+ </div>
+ <div>
+ <button type="submit" class="btn btn-primary">Valider</button>
+ </div>
+ </form>
+</div>
+ </div>
+ </div>
+ </div>
+</body>
+</html>
